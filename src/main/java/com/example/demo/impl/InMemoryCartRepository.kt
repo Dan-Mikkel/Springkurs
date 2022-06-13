@@ -6,15 +6,15 @@ import org.springframework.stereotype.Repository
 @Repository
 class InMemoryCartRepository : CartRepository {
 
-    private val cart = HashMap<Number, Number>()
+    private val cart = HashMap<Int, Int>()
 
-    override fun add(itemId: Number, quantity: Number) {
+    override fun add(itemId: Int, quantity: Int) {
         val itemQuantity = cart[itemId] ?: quantity
 
         cart[itemId] = itemQuantity
     }
 
-    override fun remove(itemId: Number) {
+    override fun remove(itemId: Int) {
         cart.remove(itemId)
     }
 
