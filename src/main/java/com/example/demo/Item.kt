@@ -1,3 +1,3 @@
 package com.example.demo
 
-data class Item(val id: Number, val description: String, val price: Double)
+data class Item(val id: Int, val description: String, val price: Double)

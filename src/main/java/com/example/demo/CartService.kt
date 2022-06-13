@@ -1,8 +1,8 @@
 package com.example.demo
 
 interface CartService {
-    fun addItemToCart(id: Number, quantity: Number)
-    fun removeItemFromCart(id: Number)
-    fun getAllItemsInCart(): Map<Number, Number>
+    fun addItemToCart(id: Int, quantity: Int)
+    fun removeItemFromCart(id: Int)
+    fun getAllItemsInCart(): Map<Int, Int>
     fun calculateCartCost(): Double
 }
