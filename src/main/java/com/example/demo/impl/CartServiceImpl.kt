@@ -2,11 +2,11 @@ package com.example.demo.impl
 
 import com.example.demo.CartRepository
 import com.example.demo.CartService
-import com.example.demo.ItemRepository
+import com.example.demo.Item
 import org.springframework.stereotype.Service
 
 @Service
-class CartServiceImpl(private val cartRepository: CartRepository, private val itemRepository: ItemRepository) : CartService {
+class CartServiceImpl(private val cartRepository: CartRepository, private val catalog: Map<Int, Item>) : CartService {
     override fun addItemToCart(id: Int, quantity: Int) {
         cartRepository.add(id, quantity)
     }
