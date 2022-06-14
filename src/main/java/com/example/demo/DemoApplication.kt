@@ -5,11 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Scope
 
+typealias Catalog = Map<ItemId, Item>
+
 @SpringBootApplication
 class DemoApplication {
     @Bean
     @Scope("application")
-    fun catalog(): Map<ItemId, Item> {
+    fun catalog(): Catalog {
         val items: MutableMap<Int, Item> = HashMap()
         items[0] = Item(0, "Apple Mac Book Pro", 2499.99)
         items[1] = Item(1, "32GB San Disk", 15.99)

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 class CartServiceImpl(
         private val cartRepository: CartRepository,
         @Value("#{catalog}")
-        private val catalog: Map<ItemId, Item>) : CartService, TaxService, DeliveryService {
+        private val catalog: Catalog) : CartService, TaxService, DeliveryService {
 
     @Value("\${contactEmail}")
     private var contactEmail = ""

@@ -1,6 +1,9 @@
 package com.example.demo.controller
 
-import com.example.demo.*
+import com.example.demo.CartService
+import com.example.demo.Catalog
+import com.example.demo.DeliveryService
+import com.example.demo.TaxService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.RequestMapping
@@ -8,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
 class CartController(
-        private val catalog: Map<ItemId, Item>,
+        private val catalog: Catalog,
         private val cartService: CartService,
         private val taxService: TaxService,
         private val deliveryService: DeliveryService) {
