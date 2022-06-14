@@ -4,5 +4,10 @@
       "name": "name",
       "type": "java.lang.String",
       "description": "Description for name."
-  }
-] }
+    },
+    {
+      "name": "onlineRetailer.deliveryCharge.threshold",
+      "type": "java.lang.Double",
+      "description": "The treshold that makes the customer elligible for free delivery."
+    }
+  ] }
