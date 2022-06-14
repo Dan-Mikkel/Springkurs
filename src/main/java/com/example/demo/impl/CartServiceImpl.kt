@@ -36,11 +36,11 @@ class CartServiceImpl(
 
     override fun calculateCartCost(): Double {
         val items = getAllItemsInCart()
-        return when (items.size) {
-            0 -> 0.0
-            else -> items.entries
+        return when {
+            items.isNotEmpty() -> items.entries
                     .map { (catalog[it.key]?.price ?: 0.0) * it.value }
                     .reduce { acc, number -> return acc + number }
+            else -> 0.0
         }
 
     }
