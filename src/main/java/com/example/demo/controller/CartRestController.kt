@@ -1,17 +1,17 @@
 package com.example.demo.controller
 
 import com.example.demo.CartService
-import com.example.demo.CatalogRepository
+import com.example.demo.Item
 import com.example.demo.ItemId
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class CartRestController(private val catalogRepository: CatalogRepository, private val cartService: CartService) {
+class CartRestController(private val catalog: Map<ItemId, Item>, private val cartService: CartService) {
 
     @GetMapping("/items")
-    fun getAllItemsInCart() = cartService.getAllItemsInCart().keys.map { catalogRepository.getItemFromCatalog(it) }
+    fun getAllItemsInCart() = cartService.getAllItemsInCart().keys.map { catalog[it] }
 
     @GetMapping("/cartcost")
     fun getCartCost() = cartService.calculateCartCost()

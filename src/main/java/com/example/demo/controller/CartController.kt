@@ -1,9 +1,6 @@
 package com.example.demo.controller
 
-import com.example.demo.CartService
-import com.example.demo.CatalogRepository
-import com.example.demo.DeliveryService
-import com.example.demo.TaxService
+import com.example.demo.*
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.RequestMapping
@@ -11,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
 class CartController(
-        private val catalogRepository: CatalogRepository,
+        private val catalog: Map<ItemId, Item>,
         private val cartService: CartService,
         private val taxService: TaxService,
         private val deliveryService: DeliveryService) {
@@ -26,7 +23,7 @@ class CartController(
 
         cartService.addItemToCart(id, quantity)
         model.addAttribute("message",
-                java.lang.String.format("Added to cart: %s [x%d]", catalogRepository.getItemFromCatalog(id)?.description ?: "", quantity))
+                java.lang.String.format("Added to cart: %s [x%d]", catalog[id]?.description ?: "", quantity))
 
         return "catalog"
     }
