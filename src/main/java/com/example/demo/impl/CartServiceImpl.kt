@@ -34,10 +34,16 @@ class CartServiceImpl(
         return cartRepository.getAll()
     }
 
-    override fun calculateCartCost(): Double =
-        getAllItemsInCart().entries
-                .map { (catalog[it.key]?.price ?: 0.0) * it.value}
-                .reduce { acc, number ->  return acc+number}
+    override fun calculateCartCost(): Double {
+        val items = getAllItemsInCart()
+        return when (items.size) {
+            0 -> 0.0
+            else -> items.entries
+                    .map { (catalog[it.key]?.price ?: 0.0) * it.value }
+                    .reduce { acc, number -> return acc + number }
+        }
+
+    }
 
     override fun calculateSalesTax(cost: Double) = cost * salesTaxRate
 
