@@ -49,13 +49,9 @@ class CartServiceImpl(
 
     override fun calculateSalesTax(cost: Double) = cost * salesTaxRate
 
-    override fun calculateDeliveryCharge(cost: Double): Double {
-        if (cost == 0.0 || cost >= deliveryChargeTreshold) {
-            return 0.0
-        }
-        else {
-            return standardDeliveryCharge
-        }
+    override fun calculateDeliveryCharge(cost: Double) = when {
+        (cost == 0.0 || cost >= deliveryChargeTreshold) -> 0.0
+        else -> standardDeliveryCharge
     }
 }
 
