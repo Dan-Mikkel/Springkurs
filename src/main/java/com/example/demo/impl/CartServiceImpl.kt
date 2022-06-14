@@ -19,7 +19,7 @@ class CartServiceImpl(
     @Value("\${onlineRetailer.deliveryCharge.normal}")
     private var standardDeliveryCharge = 0.0
 
-    @Value("\${onlineRetailer.deliveryCharge.treshold}")
+    @Value("\${onlineRetailer.deliveryCharge.threshold}")
     private var deliveryChargeTreshold = 0.0
 
     override fun addItemToCart(id: Int, quantity: Int) {

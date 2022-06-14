@@ -8,6 +8,6 @@
     {
       "name": "onlineRetailer.deliveryCharge.threshold",
       "type": "java.lang.Double",
-      "description": "The treshold that makes the customer elligible for free delivery."
+      "description": "The threshold that makes the customer eligible for free delivery."
     }
   ] }
