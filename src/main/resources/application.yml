@@ -4,8 +4,6 @@ onlineRetailer:
     normal: 2.50      # Delivery charge (GBP) on normal deliveries.
     threshold: 3000.0   # Threshold cart value (GBP), for free delivery.
 ---
-spring:
-  profiles: development
 resources:
   db: H2
   logs: C:\temp\logs\
