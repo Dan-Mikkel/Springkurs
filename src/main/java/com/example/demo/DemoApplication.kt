@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Scope
 class DemoApplication {
     @Bean
     @Scope("application")
-    fun catalog(): Map<Int, Item> {
+    fun catalog(): Map<ItemId, Item> {
         val items: MutableMap<Int, Item> = HashMap()
         items[0] = Item(0, "Apple Mac Book Pro", 2499.99)
         items[1] = Item(1, "32GB San Disk", 15.99)
