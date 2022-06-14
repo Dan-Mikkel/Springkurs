@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service
 @Service
 class CartServiceImpl(
         private val cartRepository: CartRepository,
-        private val catalogRepository: CatalogRepository) : CartService, TaxService, DeliveryService {
+        @Value("#{catalog}")
+        private val catalog: Map<ItemId, Item>) : CartService, TaxService, DeliveryService {
 
     @Value("\${contactEmail}")
     private var contactEmail = ""
@@ -39,7 +40,7 @@ class CartServiceImpl(
         val items = getAllItemsInCart()
         return when {
             items.isNotEmpty() -> items.entries
-                    .map { (catalogRepository.getItemFromCatalog(it.key)?.price ?: 0.0) * it.value }
+                    .map { (catalog[it.key]?.price ?: 0.0) * it.value }
                     .reduce { acc, number -> return acc + number }
             else -> 0.0
         }
