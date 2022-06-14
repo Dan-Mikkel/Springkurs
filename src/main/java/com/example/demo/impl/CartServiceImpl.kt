@@ -51,10 +51,10 @@ class CartServiceImpl(
 
     override fun calculateDeliveryCharge(cost: Double): Double {
         if (cost == 0.0 || cost >= deliveryChargeTreshold) {
-            return 0.0;
+            return 0.0
         }
         else {
-            return standardDeliveryCharge;
+            return standardDeliveryCharge
         }
     }
 }
