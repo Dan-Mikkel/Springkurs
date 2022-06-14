@@ -10,9 +10,7 @@ class InMemoryCartRepository : CartRepository {
     private val cart = HashMap<ItemId, Int>()
 
     override fun add(id: ItemId, quantity: Int) {
-        val itemQuantity = cart[id] ?: quantity
-
-        cart[id] = itemQuantity
+        cart[id] = quantity
     }
 
     override fun remove(id: ItemId) {

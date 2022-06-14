@@ -23,7 +23,9 @@ class CartServiceImpl(
     private var deliveryChargeTreshold = 0.0
 
     override fun addItemToCart(id: Int, quantity: Int) {
-        cartRepository.add(id, quantity)
+        val oldQuantity = cartRepository.getAll()[id] ?: 0
+
+        cartRepository.add(id, oldQuantity + quantity)
     }
 
     override fun removeItemFromCart(id: Int) {
