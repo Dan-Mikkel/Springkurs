@@ -1,3 +1,5 @@
 package com.example.demo
 
-data class Item(val id: Int, val description: String, val price: Double)
+typealias ItemId = Int
+
+data class Item(val id: ItemId, val description: String, val price: Double)

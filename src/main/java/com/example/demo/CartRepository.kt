@@ -1,7 +1,7 @@
 package com.example.demo
 
 interface CartRepository {
-    fun add(itemId: Int, quantity: Int)
-    fun remove(itemId: Int)
-    fun getAll(): Map<Int, Int>
+    fun add(id: ItemId, quantity: Int)
+    fun remove(id: ItemId)
+    fun getAll(): Map<ItemId, Int>
 }
