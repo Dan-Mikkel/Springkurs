@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Scope
 
-typealias Catalog = Map<ItemId, Item>
+typealias Catalog = MutableMap<ItemId, Item>
 
 @SpringBootApplication
 class DemoApplication {
