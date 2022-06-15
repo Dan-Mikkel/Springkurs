@@ -13,7 +13,7 @@ class CartRestController(private val catalog: Catalog, private val cartService: 
     @GetMapping("/items")
     fun getAllItemsInCart() = cartService.getAllItemsInCart().keys.map { catalog[it] }
 
-    @GetMapping("/cartcost")
+    @GetMapping("/cartCost")
     fun getCartCost() = cartService.calculateCartCost()
 
     @GetMapping("/quantityForItem/{itemId}")

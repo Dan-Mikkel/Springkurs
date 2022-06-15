@@ -20,7 +20,7 @@ class CartServiceImpl(
     private var standardDeliveryCharge = 0.0
 
     @Value("\${onlineRetailer.deliveryCharge.threshold}")
-    private var deliveryChargeTreshold = 0.0
+    private var deliveryChargeThreshold = 0.0
 
     override fun addItemToCart(id: Int, quantity: Int) {
         val oldQuantity = cartRepository.getAll()[id] ?: 0
@@ -50,7 +50,7 @@ class CartServiceImpl(
     override fun calculateSalesTax(cost: Double) = cost * salesTaxRate
 
     override fun calculateDeliveryCharge(cost: Double) = when {
-        (cost == 0.0 || cost >= deliveryChargeTreshold) -> 0.0
+        (cost == 0.0 || cost >= deliveryChargeThreshold) -> 0.0
         else -> standardDeliveryCharge
     }
 }
