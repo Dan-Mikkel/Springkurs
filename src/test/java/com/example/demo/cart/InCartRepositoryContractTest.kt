@@ -1,6 +1,6 @@
 package com.example.demo.cart
 
-class InCartRepositoryContractImpl : CartRepositoryContract {
+class InCartRepositoryContractTest : CartRepositoryContract {
     override fun createSystemUnderTest(): CartRepository {
         return InMemoryCartRepository()
     }
