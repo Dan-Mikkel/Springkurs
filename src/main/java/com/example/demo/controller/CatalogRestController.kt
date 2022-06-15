@@ -11,7 +11,7 @@ import java.net.URI
 @RequestMapping("/catalog")
 class CatalogRestController(private val catalog: Catalog) {
 
-    @GetMapping(produces = ["application/json", "application/xml")
+    @GetMapping(produces = ["application/json", "application/xml"])
     fun getAllCatalogItems() = catalog.toMap()
 
     @PostMapping(consumes = ["application/json", "application/xml"], produces = ["application/json", "application/xml"])
