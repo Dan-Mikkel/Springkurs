@@ -1,9 +1,9 @@
 package com.example.demo.impl
 
 import com.example.demo.ProductSuggestionRepository
+import com.example.demo.model.ProductSuggestion
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
-import solution.onlineretailer.ProductSuggestion
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
 

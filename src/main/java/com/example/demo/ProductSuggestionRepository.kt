@@ -1,7 +1,7 @@
 package com.example.demo
 
+import com.example.demo.model.ProductSuggestion
 import org.springframework.transaction.annotation.Transactional
-import solution.onlineretailer.ProductSuggestion
 
 interface ProductSuggestionRepository {
     // Get all product suggestions from the database.
