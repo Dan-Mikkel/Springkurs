@@ -47,11 +47,6 @@
             <artifactId>jackson-dataformat-xml</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
-        </dependency>
-
         <!-- Data-related dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
