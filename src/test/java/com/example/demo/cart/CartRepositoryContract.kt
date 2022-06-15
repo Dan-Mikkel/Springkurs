@@ -7,7 +7,7 @@ import kotlin.test.assertTrue
 interface CartRepositoryContract: Testable<CartRepository> {
 
     @Test
-    fun `Get returns an empty map when nothing has been added`() {
+    fun `getAll returns an empty map when nothing has been added`() {
         val sut = createSystemUnderTest()
         assertTrue(sut.getAll().isEmpty())
     }
