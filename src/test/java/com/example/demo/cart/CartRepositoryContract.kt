@@ -6,8 +6,6 @@ import kotlin.test.assertTrue
 
 interface CartRepositoryContract: Testable<CartRepository> {
 
-    override fun createSystemUnderTest(): CartRepository
-
     @Test
     fun `Get returns an empty map when nothing has been added`() {
         val sut = createSystemUnderTest()
