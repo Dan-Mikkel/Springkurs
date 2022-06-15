@@ -1,8 +1,8 @@
 package com.example.demo.cart
 
 import com.example.demo.Testable
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 interface CartRepositoryContract: Testable<CartRepository> {
 
