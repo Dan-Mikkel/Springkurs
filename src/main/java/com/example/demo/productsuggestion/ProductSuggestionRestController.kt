@@ -1,7 +1,5 @@
-package com.example.demo.controller
+package com.example.demo.productsuggestion
 
-import com.example.demo.ProductSuggestionRepository
-import com.example.demo.model.ProductSuggestion
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*

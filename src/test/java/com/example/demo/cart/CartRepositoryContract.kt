@@ -1,5 +1,6 @@
-package com.example.demo
+package com.example.demo.cart
 
+import com.example.demo.Testable
 import org.junit.jupiter.api.Test
 import kotlin.test.assertTrue
 

@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.tax
 
 interface TaxService {
     fun calculateSalesTax(cost: Double): Double

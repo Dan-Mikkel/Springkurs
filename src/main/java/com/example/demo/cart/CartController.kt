@@ -1,9 +1,8 @@
-package com.example.demo.controller
+package com.example.demo.cart
 
-import com.example.demo.CartService
 import com.example.demo.Catalog
-import com.example.demo.DeliveryService
-import com.example.demo.TaxService
+import com.example.demo.delivery.DeliveryService
+import com.example.demo.tax.TaxService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping

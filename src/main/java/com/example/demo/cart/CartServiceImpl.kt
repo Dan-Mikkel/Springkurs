@@ -1,6 +1,8 @@
-package com.example.demo.impl
+package com.example.demo.cart
 
-import com.example.demo.*
+import com.example.demo.Catalog
+import com.example.demo.delivery.DeliveryService
+import com.example.demo.tax.TaxService
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 

@@ -1,6 +1,5 @@
-package com.example.demo.impl
+package com.example.demo.cart
 
-import com.example.demo.CartRepository
 import com.example.demo.ItemId
 import org.springframework.stereotype.Repository
 

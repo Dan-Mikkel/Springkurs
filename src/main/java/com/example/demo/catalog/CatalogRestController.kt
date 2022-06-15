@@ -1,4 +1,4 @@
-package com.example.demo.controller
+package com.example.demo.catalog
 
 import com.example.demo.Catalog
 import com.example.demo.Item

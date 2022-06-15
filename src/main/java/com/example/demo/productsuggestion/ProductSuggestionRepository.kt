@@ -1,6 +1,5 @@
-package com.example.demo
+package com.example.demo.productsuggestion
 
-import com.example.demo.model.ProductSuggestion
 import org.springframework.transaction.annotation.Transactional
 
 interface ProductSuggestionRepository {

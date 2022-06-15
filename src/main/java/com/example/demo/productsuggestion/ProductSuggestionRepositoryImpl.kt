@@ -1,7 +1,5 @@
-package com.example.demo.impl
+package com.example.demo.productsuggestion
 
-import com.example.demo.ProductSuggestionRepository
-import com.example.demo.model.ProductSuggestion
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 import javax.persistence.EntityManager

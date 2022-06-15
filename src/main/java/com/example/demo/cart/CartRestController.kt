@@ -1,6 +1,5 @@
-package com.example.demo.controller
+package com.example.demo.cart
 
-import com.example.demo.CartService
 import com.example.demo.Catalog
 import com.example.demo.ItemId
 import org.springframework.web.bind.annotation.GetMapping

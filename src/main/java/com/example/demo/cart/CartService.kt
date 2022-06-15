@@ -1,4 +1,6 @@
-package com.example.demo
+package com.example.demo.cart
+
+import com.example.demo.ItemId
 
 interface CartService {
     fun addItemToCart(id: ItemId, quantity: Int)
