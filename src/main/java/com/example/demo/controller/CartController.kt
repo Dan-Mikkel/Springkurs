@@ -20,6 +20,8 @@ class CartController(
     @get:GetMapping("/")
     val showCatalog: String = "catalog"
 
+    private val showCart = "cart"
+
     @RequestMapping("/addItemToCart")
     fun addItemToCart(model: Model, @RequestParam("id") id: Int, @RequestParam("quantity") quantity: Int): String {
 
@@ -27,7 +29,7 @@ class CartController(
         model.addAttribute("message",
                 java.lang.String.format("Added to cart: %s [x%d]", catalog[id]?.description ?: "", quantity))
 
-        return "catalog"
+        return showCatalog
     }
 
     @RequestMapping("/showCart")
@@ -37,7 +39,7 @@ class CartController(
         model.addAttribute("cartCost", java.lang.String.format("£%.2f", cartCost))
         model.addAttribute("salesTax", java.lang.String.format("£%.2f", taxService.calculateSalesTax(cartCost)))
         model.addAttribute("deliveryCharge", java.lang.String.format("£%.2f", deliveryService.calculateDeliveryCharge(cartCost)))
-        return "cart"
+        return showCart
     }
 
     @RequestMapping("/removeItemFromCart")
