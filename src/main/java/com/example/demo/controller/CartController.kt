@@ -6,6 +6,7 @@ import com.example.demo.DeliveryService
 import com.example.demo.TaxService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 
@@ -15,11 +16,9 @@ class CartController(
         private val cartService: CartService,
         private val taxService: TaxService,
         private val deliveryService: DeliveryService) {
-    
-    @RequestMapping("/")
-    fun showCatalog(): String {
-        return "catalog"
-    }
+
+    @get:GetMapping("/")
+    val showCatalog: String = "catalog"
 
     @RequestMapping("/addItemToCart")
     fun addItemToCart(model: Model, @RequestParam("id") id: Int, @RequestParam("quantity") quantity: Int): String {
